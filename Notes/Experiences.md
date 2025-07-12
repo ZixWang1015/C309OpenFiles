@@ -3,7 +3,7 @@
 - you can try to see the rebuttal details of the papers released in Openreview.com:
   ```
   <https://openreview.net/pdf?id=wT6GHk5ShC>. # this is pdf entrence
-  <https://openreview.net/forum?id=wT6GHk5ShC>. # this is rebuttal entrence\
+  <https://openreview.net/forum?id=wT6GHk5ShC>. # this is rebuttal entrence
   ```
   
 - use this code for downloading pytorch from other sources:
