@@ -31,3 +31,8 @@
   ```
   https://papercopilot.org/
   ```
+
+- You can use this to get corresponding papers linked to your zotero:
+  ```
+  https://github.com/TideDra/zotero-arxiv-daily
+  ```
