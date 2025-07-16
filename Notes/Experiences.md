@@ -32,6 +32,11 @@
   https://papercopilot.org/
   ```
 
+- This paper use gradient and entropy for finding important tokens for token compression:
+  ```
+  https://arxiv.org/abs/2505.08392
+  ```
+
 - You can use this to get corresponding papers linked to your zotero:
   ```
   https://github.com/TideDra/zotero-arxiv-daily
