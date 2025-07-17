@@ -42,6 +42,11 @@
   https://github.com/TideDra/zotero-arxiv-daily
   ```
 
+- You can use this website for recording your pre-experimental results and switch them to latex table format:
+  ```
+  https://www.tablesgenerator.com/
+  ```
+
 - You can download various icons or .svg vector for plotting your core alrorithm figure (downloading may require VPN):
   ```
   https://www.flaticon.com/
