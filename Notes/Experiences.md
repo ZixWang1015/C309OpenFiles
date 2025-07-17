@@ -41,3 +41,8 @@
   ```
   https://github.com/TideDra/zotero-arxiv-daily
   ```
+
+- You can download various icons or .svg vector for plotting your core alrorithm figure (downloading may require VPN):
+  ```
+  https://www.flaticon.com/
+  ```
