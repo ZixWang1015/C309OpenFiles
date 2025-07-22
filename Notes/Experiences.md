@@ -47,6 +47,11 @@
   https://www.tablesgenerator.com/
   ```
 
+- Your can view you IEEE journal submission in the following links with your scholarone account:
+  ```
+  https://mc.manuscriptcentral.com/tdsc-cs
+  ```
+
 - You can download various icons or .svg vector for plotting your core alrorithm figure (downloading may require VPN):
   ```
   https://www.flaticon.com/
