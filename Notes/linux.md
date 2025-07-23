@@ -35,4 +35,7 @@
    ```
    cd /usr/bin
    ```
-
+7. Check all the directories in the main cd:
+   ```
+   ls /usr/bin
+   ```
