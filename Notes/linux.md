@@ -28,3 +28,11 @@
    echo $PATH
    ```
 
+6. Use cd commend to enter the directory of other users:
+   ```
+   sudo -i
+   ```
+   ```
+   cd /usr/bin
+   ```
+
