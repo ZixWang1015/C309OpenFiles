@@ -20,7 +20,7 @@
         su - abc            # 这里输入密码切换用户
         ```
 
-3. conda环境管理：**请注意不要在自己的用户下重新安装anaconda/miniconda/miniforge**
+3. conda环境管理：**请注意不要在自己的用户下重新安装anaconda/miniconda/miniforge**，此外强烈建议将虚拟环境安装在/home目录之外，/mnt/data1位置处，此处18T存储空间更多，不要都挤在/home目录下
     - 本机anaconda的安装路径为/opt/anaconda3/bin
     - 添加新用户后，首先借助vim修改其中的环境变量：
         ```
@@ -135,4 +135,5 @@
 
         source ~/.bashrc                # 更新环境变量
         su - wzx nvcc -V                # 再进行测试，发现可以读取了
+
         ```
