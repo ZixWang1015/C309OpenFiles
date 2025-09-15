@@ -52,6 +52,11 @@
   https://mc.manuscriptcentral.com/tdsc-cs
   ```
 
+- MIA and defense summary:
+  ```
+  https://github.com/HongshengHu/membership-inference-machine-learning-literature
+  ```
+
 - You can download various icons or .svg vector for plotting your core alrorithm figure (downloading may require VPN):
   ```
   https://www.flaticon.com/
