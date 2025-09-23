@@ -123,7 +123,7 @@
         ```
         huggingface-cli download --resume-download Qwen/Qwen2.5-7B-Instruct --local-dir ./qwen-2.5-7b-instruct
         ```
-    - 使用Git来克隆整个repo或者从Github下载单个文件，首先在github页面找到你要下载的文件，例如我这里是https://github.com/TIGER-AI-Lab/LongICLBench/blob/main/processed_data/train_tacred.json，然后注意：点击Github预览框中的“raw”，但是在这里复制链接，因为这里是可以HTML直接交互通过命令行下载文件的。复制好链接后，直接通过命令下载文件：
+    - 使用Git来克隆整个repo或者从Github下载单个文件，首先在github页面找到你要下载的文件，然后注意：点击Github预览框中的“raw”，但是在这里复制链接，因为这里是可以HTML直接交互通过命令行下载文件的。复制好链接后，直接通过命令下载文件：
         ```
         wget https://github.com/TIGER-AI-Lab/LongICLBench/raw/refs/heads/main/processed_data/train_tacred.json
         ```
@@ -163,4 +163,5 @@
 
         source ~/.bashrc                # 更新环境变量
         su - abc nvcc -V                # 再进行测试，发现可以读取了
+
         ```
