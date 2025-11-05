@@ -56,7 +56,10 @@
   ```
   https://github.com/HongshengHu/membership-inference-machine-learning-literature
   ```
-
+- A nice rebuttal response:
+  ```
+  https://openreview.net/forum?id=gBgvuTd9Hx
+  ```
 - You can download various icons or .svg vector for plotting your core alrorithm figure (downloading may require VPN):
   ```
   https://www.flaticon.com/
