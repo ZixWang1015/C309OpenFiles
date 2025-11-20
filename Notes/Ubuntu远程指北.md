@@ -151,6 +151,7 @@
         ```
         sudo chmod go+x /mnt/data1
         sudo chmod go+x /mnt/data1/conda_env
+        sudo chown -R $USER:$USER ./mnt/data1/your_name    # 将自己的用户更改为自己目录的拥有者，别人无法写入
         ```
         同时注意当前的路径权限的等级：
         ```
@@ -173,5 +174,6 @@
         su - abc nvcc -V                # 再进行测试，发现可以读取了
 
         ```
+
 
 
