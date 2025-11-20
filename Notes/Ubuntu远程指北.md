@@ -127,6 +127,12 @@
         ```
         wget https://github.com/TIGER-AI-Lab/LongICLBench/raw/refs/heads/main/processed_data/train_tacred.json
         ```
+    - 由于hf-mirror.com的连接经常是不稳定的，因此另外一个选择是从ModelScope下载模型：
+      ```
+      conda activate your_env
+      pip install modelscope
+      modelscope download --model (your_model_name) --local_dir (your_download_root)
+      ```
     
 
 
@@ -165,3 +171,4 @@
         su - abc nvcc -V                # 再进行测试，发现可以读取了
 
         ```
+
