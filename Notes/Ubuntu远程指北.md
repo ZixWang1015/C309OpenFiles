@@ -149,8 +149,8 @@
       ```
       使用方式是在AutoModelForCasualLM里添加参数：
       ```
-      attention_implementation='flash_attention_2',  # 不计算attention score
-      attention_implementation='eager',              # 你需要计算具体token的attention weights
+      attn_implementation='flash_attention_2',  # 不计算attention score
+      attn_implementation='eager',              # 你需要计算具体token的attention weights
       ```
       
     
@@ -192,6 +192,7 @@
         su - abc nvcc -V                # 再进行测试，发现可以读取了
 
         ```
+
 
 
 
