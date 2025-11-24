@@ -135,6 +135,24 @@
       pip install modelscope
       modelscope download --model (your_model_name) --local_dir (your_download_root)
       ```
+
+    - 安装Flash-attention，你可能会用到的：
+      首先去Github release网址：
+      ```
+      https://github.com/Dao-AILab/flash-attention/releases
+      ```
+      记得对应你的cuda版本/Torch版本/Python版本，然后复制下载链接，记得一定是包含(abiFALSE)的那个.whl文件，不然会报错，然后直接cd到自己的路径使用wget：
+      ```
+      cd /mnt/data1/my_dir/...
+      wget https://github.com/Dao-AILab/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3+cu12torch2.4cxx11abiFALSE-cp311-cp311-linux_x86_64.whl
+      pip install ...whl
+      ```
+      使用方式是在AutoModelForCasualLM里添加参数：
+      ```
+      attention_implementation='flash_attention_2',  # 不计算attention score
+      attention_implementation='eager',              # 你需要计算具体token的attention weights
+      ```
+      
     
 
 
@@ -174,6 +192,7 @@
         su - abc nvcc -V                # 再进行测试，发现可以读取了
 
         ```
+
 
 
 
