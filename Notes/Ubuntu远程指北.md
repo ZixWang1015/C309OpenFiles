@@ -136,8 +136,7 @@
       modelscope download --model (your_model_name) --local_dir (your_download_root)
       ```
 
-    - 安装Flash-attention，你可能会用到的：
-      首先去Github release网址：
+    - 安装Flash-attention，maybe你可能会用到的，首先去Github release网址：
       ```
       https://github.com/Dao-AILab/flash-attention/releases
       ```
@@ -151,6 +150,15 @@
       ```
       attn_implementation='flash_attention_2',  # 不计算attention score
       attn_implementation='eager',              # 你需要计算具体token的attention weights
+      ```
+      如果你想要使用windows端的程序：
+      ```
+      https://github.com/kingbri1/flash-attention/releases
+      ```
+      记得安装之前确认你的三项基础包和配置的版本：
+      ```
+      nvcc -V
+      pip list
       ```
       
     
@@ -192,6 +200,7 @@
         su - abc nvcc -V                # 再进行测试，发现可以读取了
 
         ```
+
 
 
 
