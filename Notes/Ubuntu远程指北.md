@@ -200,6 +200,15 @@
         su - abc nvcc -V                # 再进行测试，发现可以读取了
 
         ```
+      - 运行某些模型(如Phi-3-small-128k)时，可能需要激活对应的特殊custom code，此时一般需要在AutoConfig/AutoTokenizer/AutoCasualForModel中定义：
+        ```
+        Trust_remote_code=True
+        ```
+        有时还会用到类似triton/Tiktoken的包，其中triton需要安装windows对应版本，且一般很难直接编译成功：
+        ```
+        https://github.com/woct0rdho/triton-windows/releases
+        ```
+
 
 
 
