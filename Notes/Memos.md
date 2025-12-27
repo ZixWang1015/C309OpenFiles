@@ -74,4 +74,4 @@
   ```
   https://huggingface.co/microsoft/Phi-3-small-128k-instruct/discussions/19
   ```
-  
+  Another notice: you must use your own user (not the root user in Ubuntu) to run the code, otherwise you will receive the bug error of not have flash-attn
