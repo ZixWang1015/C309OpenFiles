@@ -64,3 +64,9 @@
   ```
   https://www.flaticon.com/
   ```
+
+- Using Phi-3-Small-128k model may encounter triton error. Please fix it using:
+  ```
+  https://huggingface.co/microsoft/Phi-3-small-128k-instruct/commit/ed7de9a074b0760e6cf050fe1d103b90834933c8
+  ```
+  
