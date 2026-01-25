@@ -210,8 +210,11 @@
         ```
 8. 尝试关闭VSCode-SSH远程连接后代码依旧可以正常运行：
    ```
-   (/mnt/data1/conda_env/retrieval) wzx@root123-Rack-Server:/mnt/data1/wzx/LRM-DCD$ nohup /mnt/data1/conda_env/retrieval/bin/python /mnt/data1/wzx/LRM-DCD/4_rag_ia.py > ./...root/output.log 2>&1 &
+   (/env_root) user_name@server_name:/code_root$ nohup /...env_root/bin/python /code_root/test.py > ./save_root/output.log 2>&1 &
    ```
+   
+   这里`/env_root`表示你使用的虚拟环境的路径，`/code_root`是你的项目主路径，`nohup`命令确保进程在终端关闭后继续运行，`> ./save_root/output.log`表示将标准输出重定向到日志文件(将原本在命令行中显示的日志保存起来)，`2>&1`表示将标准错误也定向到.log文件中，`&`表示后台运行。
+
 
 
 
