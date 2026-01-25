@@ -208,6 +208,11 @@
         ```
         https://github.com/woct0rdho/triton-windows/releases
         ```
+8. 尝试关闭VSCode-SSH远程连接后代码依旧可以正常运行：
+   ```
+   (/mnt/data1/conda_env/retrieval) wzx@root123-Rack-Server:/mnt/data1/wzx/LRM-DCD$ nohup /mnt/data1/conda_env/retrieval/bin/python /mnt/data1/wzx/LRM-DCD/4_rag_ia.py > ./...root/output.log 2>&1 &
+   ```
+
 
 
 
