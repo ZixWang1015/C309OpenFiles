@@ -215,6 +215,39 @@
    
    这里`/env_root`表示你使用的虚拟环境的路径，`/code_root`是你的项目主路径，`nohup`命令确保进程在终端关闭后继续运行，`> ./save_root/output.log`表示将标准输出重定向到日志文件(将原本在命令行中显示的日志保存起来)，`2>&1`表示将标准错误也定向到.log文件中，`&`表示后台运行。
 
+   事实上，这个nohop系列命令还可以与Shell同时使用，使得一系列代码连续运行，且一直保持在后台不受VSCode-SSH连接断开的影响，下面放一个简单的示例：
+   ```
+   #!/bin/bash
+    # run_services.sh - 专业级后台服务启动器
+    
+    LOG_DIR=~/service_logs
+    mkdir -p $LOG_DIR
+    
+    TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+    
+    # 启动主Python服务
+    start_service() {
+        local name=$1
+        local command=$2
+        local log_file="$LOG_DIR/${name}_${TIMESTAMP}.log"
+        
+        nohup $command > $log_file 2>&1 &
+        local pid=$!
+        
+        echo "[$(date)] 启动 $name | PID: $pid | 日志: $log_file"
+        echo "$name,$pid,$log_file" >> $LOG_DIR/services.index
+    }
+    
+    # 启动各项服务
+    start_service "main_python" "/my_root/python /my_root/test.py"
+    start_service "data_processor" "/path/to/processor.py --daemon"
+    start_service "monitoring" "/opt/scripts/monitor.sh"
+    
+    echo "所有服务已在后台启动！使用以下命令监控："
+    echo "tail -f $LOG_DIR/*.log"
+   ```
+
+
 
 
 
