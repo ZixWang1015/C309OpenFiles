@@ -217,35 +217,45 @@
 
    事实上，这个nohop系列命令还可以与Shell同时使用，使得一系列代码连续运行，且一直保持在后台不受VSCode-SSH连接断开的影响，下面放一个简单的示例：
    ```
-   #!/bin/bash
-    # run_services.sh - 专业级后台服务启动器
+    # Define the python interpreter and script path based on your environment
+    PYTHON_BIN="/...env_root/bin/python"
+    SCRIPT_PATH="/...code_root/test.py"
     
-    LOG_DIR=~/service_logs
-    mkdir -p $LOG_DIR
+    # Define the list of models you want to evaluate
+    # Add your specific model paths here
+    MODELS=(
+        "llama3.2-1b"
+        "llama3.2-3b"
+        "llama3.1-8b"
+        "chatglm-9b-hf"
+    )
     
-    TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+    # Loop through each model
+    for model in "${MODELS[@]}"; do
     
-    # 启动主Python服务
-    start_service() {
-        local name=$1
-        local command=$2
-        local log_file="$LOG_DIR/${name}_${TIMESTAMP}.log"
-        
-        nohup $command > $log_file 2>&1 &
-        local pid=$!
-        
-        echo "[$(date)] 启动 $name | PID: $pid | 日志: $log_file"
-        echo "$name,$pid,$log_file" >> $LOG_DIR/services.index
-    }
+    # Extract the model name for the output filename (e.g., "qwen2.5-7b")
+    # This grabs the text after the last '/'
+    model_name=$(basename "$model")
     
-    # 启动各项服务
-    start_service "main_python" "/my_root/python /my_root/test.py"
-    start_service "data_processor" "/path/to/processor.py --daemon"
-    start_service "monitoring" "/opt/scripts/monitor.sh"
+    echo "=================================================="
+    echo "Starting evaluation for: $model_name"
+    echo "Time: $(date)"
     
-    echo "所有服务已在后台启动！使用以下命令监控："
-    echo "tail -f $LOG_DIR/*.log"
+    # Run the python script
+    # We dynamically create the output filename based on the model name
+    $PYTHON_BIN $SCRIPT_PATH \
+        --model "$model" \
+        --input_file "./test.json" \
+
+    echo "Finished evaluation for: $model_name"
+    echo "=================================================="
+    echo ""
+
+    done
+    
+    echo "All models finished processing."
    ```
+
 
 
 
