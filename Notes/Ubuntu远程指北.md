@@ -263,8 +263,9 @@
 
    然后，你就可以借助nohup命令直接在后台完成全自动运行，关闭VSCode关机走人了：
    ```
-   nohup ./run_all_model.sh > execution_log.out 2>&1 &
+   nohup ./test.sh > your_log_name.out 2>&1 &
    ```
+
 
 
 
