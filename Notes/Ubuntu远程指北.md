@@ -271,6 +271,20 @@
     sudo reboot
     ```
 
+10. 遇到校园网维护/网络攻防实验等情况时，远程APP或者SSH均会连接困难，可以考虑使用TailScale这个软件，利用命令行将APP安装到远程被控Ubuntu服务器上，然后本地也安装，登录同一个Gmail账号，即可为这些电脑共建一个内网，分配各自对应的全新IP可以连接。
+
+11. VSCode插件Codex加SSH教程：
+    Step 1: 首先准备一个ChatGPT Plus账号以及一个干净快速的科学上网，记录下科学上网对应的端口记为aaaa (Clash一般是7890或7897)，再选择一个一般不会与人撞车的公共端口bbbb
+    
+    Step 2: 在你的本地VSCode安装Codex插件，连上科学上网然后登录ChatGPT Plus账号，直到进入界面，然后如果你使用的是Windows电脑，去路径下找到auth.json文件(这个文件千万要保密)
+    ```
+    C:/User/your_user_name/.codex/
+    ```
+
+    Step 3: 在被控的远程Ubuntu电脑上登录Root用户，在/home/root下设置远程转发端口：
+    ```
+    
+
 
 
 
