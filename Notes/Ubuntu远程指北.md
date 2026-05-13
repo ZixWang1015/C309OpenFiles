@@ -1,4 +1,4 @@
-# ubuntu服务器远程使用指北
+# Ubuntu服务器远程使用指北
 
 1. 基本信息：
     - 主机IP地址：xx.xx.xx.xx
