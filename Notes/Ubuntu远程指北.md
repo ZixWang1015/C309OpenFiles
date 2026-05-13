@@ -274,17 +274,58 @@
 10. 遇到校园网维护/网络攻防实验等情况时，远程APP或者SSH均会连接困难，可以考虑使用TailScale这个软件，利用命令行将APP安装到远程被控Ubuntu服务器上，然后本地也安装，登录同一个Gmail账号，即可为这些电脑共建一个内网，分配各自对应的全新IP可以连接。
 
 11. VSCode插件Codex加SSH教程：
-    Step 1: 首先准备一个ChatGPT Plus账号以及一个干净快速的科学上网，记录下科学上网对应的端口记为aaaa (Clash一般是7890或7897)，再选择一个一般不会与人撞车的公共端口bbbb
     
-    Step 2: 在你的本地VSCode安装Codex插件，连上科学上网然后登录ChatGPT Plus账号，直到进入界面，然后如果你使用的是Windows电脑，去路径下找到auth.json文件(这个文件千万要保密)
+    **Step 1**： 首先准备一个ChatGPT Plus账号以及一个干净快速的科学上网，记录下科学上网对应的端口记为aaaa (Clash一般是7890或7897)，再选择一个一般不会与人撞车的公共端口bbbb
+    
+    **Step 2**：在你的本地VSCode安装Codex插件，连上科学上网然后登录ChatGPT Plus账号，直到进入界面，然后如果你使用的是Windows电脑，去路径下找到auth.json文件(这个文件千万要保密)
     ```
     C:/User/your_user_name/.codex/
     ```
 
-    Step 3: 在被控的远程Ubuntu电脑上登录Root用户，在/home/root下设置远程转发端口：
+    **Step 3**： 在被控的远程Ubuntu电脑上登录Root用户，在/home/root下设置远程转发端口：
+    ```
+    export http_proxy=http://127.0.0.1:bbbb
+    export https_proxy=http://127.0.0.1:bbbb
+    export HTTP_PROXY=http://127.0.0.1:bbbb
+    export HTTPS_PROXY=http://127.0.0.1:bbbb
+    source ~/.bashrc
     ```
     
+    请注意，这里是在你的被控SSH远端Ubuntu服务器上进行更新
 
+    **Step 4**：将你的SSH登录config调整为你自己的用户，然后为你的用户单独下载Codex插件，便于后续复制auth.json文件
+
+    从原来的由Root用户登录：
+    ```
+    Host your_server
+    HostName your_ip_address
+    User your_root_name
+    ```
+
+    改为用你的用户和设置好的端口映射登录：
+    ```
+    Host your_server
+    HostName your_ip_address
+    User your_own_user_name
+    RemoteForward bbbb 127.0.0.1:aaaa
+    ```
+
+    然后登录进入你的用户目录下，将之前你找到的auth.json复制到你个人的用户目录下，确保别人无法获知你的个人Key：
+    ```
+    /home/your_own_user_name/.codex/auth.json
+    ```
+
+    **Step 5**：最后一步，在已经SSH远程连接的界面使用ctrl+shift+P打开VSCode控制面板，输入Open Remote Settings然后对SSH远程的setting.json进行设置，你只需要添加如下的信息到json文件内部即可：
+    ```
+    "remote.SSH.httpProxy": "http://127.0.0.1:bbbb",
+    "http.proxy": "http://127.0.0.1:bbbb",
+    "https.proxy": "http://127.0.0.1:bbbb"
+    ```
+
+    然后你就可以打开SSH远程的codex插件开始对话了
+
+    参考：<https://github.com/lxr-1204/vscode_codeX/tree/main>
+    
 
 
 
