@@ -325,7 +325,20 @@
     然后你就可以打开SSH远程的codex插件开始对话了
 
     参考：<https://github.com/lxr-1204/vscode_codeX/tree/main>
-    
+
+12. 解决Codex每次Reconnecting 5/5的问题：
+
+    一般都是网络协议的问题，包括WebSocket和HTTPS的冲突问题，解决办法是找到.codex/config.toml文件，添加以下的命令：
+    ```
+    model_provider = "openai_http"
+
+    [model_providers.openai_http]
+    name = "OpenAI HTTP only"
+    wire_api = "responses"
+    supports_websockets = false
+    requires_openai_auth = true
+    ```
+
 
 
 
