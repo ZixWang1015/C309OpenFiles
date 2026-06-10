@@ -138,7 +138,7 @@
 
     - 安装Flash-attention，maybe你可能会用到的，首先去Github release网址：
       ```
-      https://github.com/Dao-AILab/flash-attention/releases
+      https://github.com/Dao-AILab/flash-attention/releases     ## 注意This is for Linux
       ```
       记得对应你的cuda版本/Torch版本/Python版本，然后复制下载链接，记得一定是包含(abiFALSE)的那个.whl文件，不然会报错，然后直接cd到自己的路径使用wget：
       ```
@@ -153,7 +153,7 @@
       ```
       如果你想要使用windows端的程序：
       ```
-      https://github.com/kingbri1/flash-attention/releases
+      https://github.com/kingbri1/flash-attention/releases   # 注意This is for Windows
       ```
       记得安装之前确认你的三项基础包和配置的版本：
       ```
