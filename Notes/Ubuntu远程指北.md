@@ -1,5 +1,7 @@
 # Ubuntu服务器远程使用指北
 
+0. 安装Ubuntu系统并配置的步骤大概是：去官网下载.iso -> 借助制盘工具写入空U盘 -> 电脑进Bios由U盘启动 -> 填写基本配置分盘 -> 进系统自动安装nvidia拓展 -> 配置Codex -> 安装nvcc和mini-forge -> 开始配置conda环境工作
+
 1. 基本信息：
     - 主机IP地址：xx.xx.xx.xx
     - 主机root用户名：abcdefg
