@@ -43,7 +43,7 @@
    请注意，开始代码运行之前，请仔细查看原文https://arxiv.org/pdf/2601.18734中记录的具体实验设置和细节
    ```
 
-3. 有时智力较低或者被降智的模型，如DeepSeek-V4-Flash经常会未经允许调整你的虚拟环境，然后覆盖掉某些关键的依赖包等，造成破坏。针对这一点，你可以尝试写一个/Instruction:
+3. 有时智力较低或者被降智的模型，如DeepSeek-V4-Flash经常会未经允许调整你的虚拟环境，然后覆盖掉某些关键的依赖包等，造成破坏。针对这一点，你可以尝试写一个/create-instructions:
    ```
    在本工作区执行任何任务时，禁止在未得到我明确确认前修改虚拟环境或项目依赖的版本与安装状态。包括但不限于：升级、降级、删除、重装、覆盖安装依赖库，运行 pip install/upgrade/uninstall、conda install/update/remove、poetry                   update/add/remove、uv add/remove/sync、修改 requirements.txt、pyproject.toml、poetry.lock、uv.lock、environment.yml 等会改变依赖版本或环境状态的操作。
 
