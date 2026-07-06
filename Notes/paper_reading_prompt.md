@@ -1,6 +1,6 @@
-# 这里我不想用全网都能找得到的Paper Reading Prompt，而是想要打造最适合我们C309ers的阅读prompt
+这里我不想用全网都能找得到的Paper Reading Prompt，而是想要打造最适合我们C309ers的阅读prompt
 
-Case 1 for ChatGPT：
+## Case 1 for ChatGPT：
   ```
   我们之前已经聊到了“推理蒸馏范式下A模型是否吸收了B模型推理能力分布的审计问题”这个topic，也对应了论文https://arxiv.org/abs/2604.21255v1，下面请你帮我详细深入仔细的阅读这篇论文，不要漏过任何一个细节，然后交给我一个适合资深科研工作者身份的分析报告，内容涉及：
   
