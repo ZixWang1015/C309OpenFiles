@@ -75,3 +75,12 @@
   https://huggingface.co/microsoft/Phi-3-small-128k-instruct/discussions/19
   ```
   Another notice: you must use your own user (not the root user in Ubuntu) to run the code, otherwise you will receive the bug error of not have flash-attn
+
+- Modern Transformers Iterpretability about Geomoetry and Low-rank Subspace:
+  - Tracing the Representation Geometry of LanguageModels from Pretraining to Post-training - NIPS 2025
+  - Decomposing Representation Space intoInterpretable Subspaces with UnsupervisedLearning - ICLR 2026
+  - Transformers learn factored representations - ICML 2026
+  - SVD as a Fast Interpretability Method forTransformers - ICML 2026
+  - Dimensional Collapse in Transformer Attention Outputs - ICML 2026
+  - Sequences of Logits Reveal the Low Rank Structure of Language Models - ICML 2026
+  - Disentangling Geometry, Performance, andTraining in Language Models - ICML 2026
